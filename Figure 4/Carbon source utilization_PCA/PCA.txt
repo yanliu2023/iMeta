@@ -1,0 +1,73 @@
+
+Call:
+rda(X = x) 
+
+Partitioning of variance:
+              Inertia Proportion
+Total            25.3          1
+Unconstrained    25.3          1
+
+Eigenvalues, and their contribution to the variance 
+
+Importance of components:
+                          PC1     PC2     PC3    PC4     PC5     PC6     PC7
+Eigenvalue            10.8121 2.24586 2.12425 1.3661 0.74185 0.61948 0.54341
+Proportion Explained   0.4274 0.08877 0.08396 0.0540 0.02932 0.02449 0.02148
+Cumulative Proportion  0.4274 0.51614 0.60010 0.6541 0.68342 0.70791 0.72939
+                          PC8     PC9    PC10   PC11    PC12    PC13    PC14
+Eigenvalue            0.46059 0.42378 0.35100 0.3391 0.30081 0.27473 0.25934
+Proportion Explained  0.01821 0.01675 0.01387 0.0134 0.01189 0.01086 0.01025
+Cumulative Proportion 0.74759 0.76434 0.77822 0.7916 0.80351 0.81437 0.82462
+                          PC15    PC16   PC17     PC18     PC19     PC20
+Eigenvalue            0.250755 0.24262 0.2277 0.210973 0.204027 0.187862
+Proportion Explained  0.009911 0.00959 0.0090 0.008339 0.008064 0.007426
+Cumulative Proportion 0.834528 0.84412 0.8531 0.861458 0.869522 0.876948
+                          PC21     PC22     PC23     PC24     PC25     PC26
+Eigenvalue            0.177530 0.166942 0.157903 0.151909 0.148573 0.145387
+Proportion Explained  0.007017 0.006599 0.006241 0.006004 0.005873 0.005747
+Cumulative Proportion 0.883965 0.890563 0.896805 0.902809 0.908682 0.914428
+                          PC27     PC28    PC29     PC30     PC31     PC32
+Eigenvalue            0.129577 0.119278 0.11360 0.107643 0.099806 0.093680
+Proportion Explained  0.005122 0.004715 0.00449 0.004255 0.003945 0.003703
+Cumulative Proportion 0.919550 0.924265 0.92876 0.933010 0.936955 0.940658
+                          PC33     PC34     PC35     PC36     PC37     PC38
+Eigenvalue            0.092977 0.089933 0.084683 0.080212 0.074972 0.072123
+Proportion Explained  0.003675 0.003555 0.003347 0.003171 0.002963 0.002851
+Cumulative Proportion 0.944333 0.947887 0.951235 0.954405 0.957369 0.960219
+                          PC39     PC40     PC41     PC42     PC43     PC44
+Eigenvalue            0.068514 0.066048 0.065058 0.060650 0.055076 0.051807
+Proportion Explained  0.002708 0.002611 0.002572 0.002397 0.002177 0.002048
+Cumulative Proportion 0.962928 0.965538 0.968110 0.970507 0.972684 0.974732
+                          PC45     PC46     PC47     PC48     PC49     PC50
+Eigenvalue            0.050225 0.047160 0.045314 0.040104 0.038378 0.036044
+Proportion Explained  0.001985 0.001864 0.001791 0.001585 0.001517 0.001425
+Cumulative Proportion 0.976717 0.978581 0.980372 0.981957 0.983474 0.984899
+                          PC51     PC52     PC53     PC54      PC55      PC56
+Eigenvalue            0.034527 0.033193 0.030558 0.026755 0.0252954 0.0228982
+Proportion Explained  0.001365 0.001312 0.001208 0.001058 0.0009998 0.0009051
+Cumulative Proportion 0.986264 0.987576 0.988783 0.989841 0.9908408 0.9917459
+                           PC57      PC58      PC59      PC60      PC61
+Eigenvalue            0.0217215 0.0207821 0.0179498 0.0167028 0.0157517
+Proportion Explained  0.0008586 0.0008214 0.0007095 0.0006602 0.0006226
+Cumulative Proportion 0.9926045 0.9934259 0.9941354 0.9947956 0.9954182
+                           PC62      PC63      PC64      PC65      PC66
+Eigenvalue            0.0136604 0.0128983 0.0114585 0.0098837 0.0084837
+Proportion Explained  0.0005399 0.0005098 0.0004529 0.0003907 0.0003353
+Cumulative Proportion 0.9959582 0.9964680 0.9969209 0.9973116 0.9976469
+                           PC67      PC68      PC69      PC70      PC71
+Eigenvalue            0.0081352 0.0073731 0.0065058 0.0062970 0.0052955
+Proportion Explained  0.0003216 0.0002914 0.0002572 0.0002489 0.0002093
+Cumulative Proportion 0.9979685 0.9982599 0.9985170 0.9987659 0.9989753
+                           PC72     PC73      PC74      PC75      PC76      PC77
+Eigenvalue            0.0044460 0.003668 0.0031749 0.0029326 0.0025631 1.902e-03
+Proportion Explained  0.0001757 0.000145 0.0001255 0.0001159 0.0001013 7.517e-05
+Cumulative Proportion 0.9991510 0.999296 0.9994215 0.9995374 0.9996387 9.997e-01
+                           PC78      PC79      PC80      PC81      PC82
+Eigenvalue            1.806e-03 1.528e-03 1.396e-03 8.841e-04 0.0007488
+Proportion Explained  7.139e-05 6.041e-05 5.517e-05 3.495e-05 0.0000296
+Cumulative Proportion 9.998e-01 9.998e-01 9.999e-01 9.999e-01 0.9999654
+                           PC83      PC84
+Eigenvalue            6.175e-04 2.582e-04
+Proportion Explained  2.441e-05 1.021e-05
+Cumulative Proportion 1.000e+00 1.000e+00
+
