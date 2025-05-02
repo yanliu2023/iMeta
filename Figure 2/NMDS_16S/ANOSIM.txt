@@ -1,0 +1,2 @@
+ANOSIM statistic R: 0.3704 
+      Significance: 0.001 

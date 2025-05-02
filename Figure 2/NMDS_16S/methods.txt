@@ -1,0 +1,54 @@
+####preparation####
+	library(vegan)
+	library(ggplot2)
+
+####Data loading####
+	otu_raw <- read.table("16S_otutab.txt", header = TRUE, sep = "\t", row.names = 1) #OTU Table input
+	otu <- t(otu_raw) #transposition
+
+####NMDS analysis####
+	otu.distance <- vegdist(otu, method = 'bray') #bray_curtis distance
+	df_nmds <- metaMDS(otu.distance, k = 2) #NMDS analysis
+	summary(df_nmds) 
+	df_nmds_stress <- df_nmds$stress 
+	df_nmds_stress #Applicability test, stress<=0.2
+
+####NMDS scatter diagram####
+	df_points <- as.data.frame(df_nmds$points) #Extract plotting data
+	df_points$samples <- row.names(df_points) #Add the samples variable
+	names(df_points)[1:2] <- c('NMDS1', 'NMDS2') #Rename column names
+	head(df_points)
+	p <- ggplot(df_points,aes(x=NMDS1, y=NMDS2))+ #Specified data, X-axis, Y-axis
+	geom_point(size=3)+ #Draw a point chart and set its size
+	theme_bw() #theme
+	p
+	#Read in design file
+		group <- read.table("design.txt", sep='\t', header=T)
+	#Merge the drawing data with the grouping information
+		df <- merge(df_points,group,by="samples")
+		head(df)
+	#Use the ggplot2 R package to draw graphs
+		color=c("#F7BABA","#2C94AF","#99CFED","#F7BABA","#99CFED") #Color variable
+		shape = c(16, 16, 16, 1, 1) #Shape variable
+		p1<-ggplot(data=df,aes(x=NMDS1,y=NMDS2))+ #Specified data, X-axis, Y-axis
+		theme_bw()+ #theme settings
+		geom_point(aes(color = group, shape = group), size=3)+ #Draw a point chart and set its size
+		theme(panel.grid = element_blank())+
+		scale_color_manual(values = color) + #The setting of point color
+		scale_shape_manual(values = shape) + #The setting of point shape
+  theme(axis.title.x=element_text(size=12), #Modify the text of the X-axis title
+        axis.title.y=element_text(size=12,angle=90), #Modify the text of the Y-axis title
+        axis.text.y=element_text(size=10), #Modify the text of the x-axis tick labels
+        axis.text.x=element_text(size=10), #Modify the text of the y-axis tick labels
+        panel.grid=element_blank())+ #Hide grid lines
+  ggtitle(paste('Stress=',round(df_nmds_stress, 3))) #Add the values of stress
+
+####Export PDF file####
+	pdf("p1_plot.pdf", width = 8, height = 6)
+	print(p1)
+	dev.off()
+
+####ANOSIM analysis####
+	anosim_results <- anosim(otu.distance, group$SQR, permutations = 999)
+	print(anosim_results)
+
